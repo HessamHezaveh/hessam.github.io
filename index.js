@@ -33,8 +33,8 @@ class Particle{
         this.size = size;
         this.color = color;
     }
-    //method to draw individual particle with arc method
-    //Each particle will need  x and y coordinates, these are different and independent from mouse x and y coordinates so dont confuse the two.
+    //method to draw individual particles with arc method
+    //Each particle will need  x and y coordinates, these are different and independent from mouse x and y coordinates so don't confuse the two.
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
@@ -42,7 +42,7 @@ class Particle{
         ctx.fill();
     }
 
-    //check particle position, check mouse position, move the partocle, draw the particle
+    //check particle position, check mouse position, move the particle, draw the particle
 
     update() {
         //check if particle is still within canvas
@@ -54,7 +54,7 @@ class Particle{
             this.directionY = -this.directionY;
         }
 
-        //check collision detection - mouse position / particle position
+        //check collision detection - mouse position/particle position
         //particle current position
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
@@ -101,7 +101,7 @@ function init() {
         console.log("init")
     }
 }
-// check if particles are close enough to draw line between them
+// check if particles are close enough to draw a line between them
 function connect(){
     let opacityValue = 1;
     for (let a = 0; a < particlesArray.length; a++) {
@@ -145,7 +145,7 @@ window.addEventListener('resize',
     }
 );
 
-// mouse out event
+// mouse out the event
 window.addEventListener('mouseout' , 
     function(){
         mouse.x = undefined;
