@@ -17,15 +17,13 @@ gsap.to('.img-container',{
   }
 })
 
-
 //dream
 gsap.to('.right' ,{
   autoAlpha:0,
   x:500,
   duration:1.5,
-  //snap: 1/('.right'.length-1),
   scrollTrigger:{
-    start:1
+  start:1
   }
 })
 //reality
@@ -33,21 +31,18 @@ gsap.to('.left' ,{
   autoAlpha:0,
   x:-500,
   duration:1.5,
-  //snap: 1/('.left'.length-1),
   scrollTrigger:{
-    start:1
+  start:1
   }
 })
-
 
 gsap.to('.txt-bottom',{
   autoAlpha:0,
   letterSpacing:-5,
   duration:2,
-  //snap: 1/('.txt-bottom'.length-1),
   scrollTrigger:{
     //2
-    start:1
+  start:1
   }
 })
 
@@ -62,10 +57,7 @@ tl.from('.right-side',{
   delay:.5
 })
 
-
-
 //push part
-
 
 tl.from('.left-side div',{
   y:15,
@@ -74,9 +66,7 @@ tl.from('.left-side div',{
     amount:.4
   },
   delay:.5
-})//.from('.right-side',{opacity:0,duration:2},.5).to('.wrapper' ,{y:window.innerHeight})
-
-
+})
 
 ScrollTrigger.create({
   animation:tl,
@@ -84,36 +74,11 @@ ScrollTrigger.create({
   start:"top top",
   end:"+=800",
   scrub:3,
-  
   //pin:true,
   ease:"ease",
-  delay:.5
-  
-  
+  delay:.5  
 })
 
-
-
-
-//images animation
-/*
-gsap.utils.toArray('.col').forEach(image=>{
-  gsap.fromTo(image,{
-    opacity:.3,
-    x:0
-  },{
-    opacity:1,
-    x:-50,
-    scrollTrigger:{
-      trigger:image,
-      start:"10%",
-      stagger:{
-        amount:.4
-      }
-    }
-  })
-})
-*/
 const timeline = gsap.timeline();
 
 timeline.from('.title span' ,{
