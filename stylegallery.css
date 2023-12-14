@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: #141414;
     margin: 0rem;
     overflow: hidden;
   }
@@ -20,5 +20,5 @@ body {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: 100% center;
+    object-position: 100% top;
   }

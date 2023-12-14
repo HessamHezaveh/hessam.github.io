@@ -38,8 +38,8 @@ gsap.to('.left' ,{
 
 gsap.to('.txt-bottom',{
   autoAlpha:0,
-  letterSpacing:-5,
-  duration:2,
+  letterSpacing:-3,
+  duration:0.5,
   scrollTrigger:{
     //2
   start:1
@@ -48,14 +48,15 @@ gsap.to('.txt-bottom',{
 
 const tl = gsap.timeline();
 //explore
-tl.from('.right-side',{
+/*
+tl.from('.right-side div',{
   y:15,
   opacity:0,
   stagger:{
     amount:.4
   },
   delay:.5
-})
+})*/
 
 //push part
 
@@ -67,6 +68,19 @@ tl.from('.left-side div',{
   },
   delay:.5
 })
+
+//explore
+tl.from('.right-side',{
+  y:15,
+  opacity:0,
+  stagger:{
+    amount:.4
+  },
+  delay:.5
+})
+
+
+
 
 ScrollTrigger.create({
   animation:tl,
