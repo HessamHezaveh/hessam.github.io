@@ -37,6 +37,7 @@ body{
     animation: animate 5s infinite linear;
 }
 /*head menu animation*/
+
 @keyframes animate {
     0%{
         left: 0;
@@ -85,6 +86,8 @@ section{
     overflow: hidden;
 }
 
+
+
 .img-container{
     position: absolute;
     top: 0;
@@ -98,150 +101,6 @@ section{
     width: 100%;
 }
 
-.columns{
-    display: flex;
-    gap: 1.5rem;
-    position: relative;
-}
-.col img{
-    object-fit: cover;
-}
-.col-1{
-    display: flex;
-    gap: 1.5rem;
-    flex: 5;
-}
-.box1 .col-1 img:first-child{
-    width: 150px;
-    height: 180px;
-    transform: translateY(-30px);
-}
-.box1 .col-1 img:nth-child(2){
-    width: 380px;
-    height: 430px;
-}
-.col-3 {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    flex-wrap: wrap ;
-    flex: 4;
-
-}
-
-.box1 .col-3 img:first-child {
-    width: 320px;
-    height: 170px;
-}
-.box1 .col-3 img:nth-child(2){
-    width: 150px;
-    
-}
-.box1 .col-3 img:nth-child(3){
-    width: 200px;
-    height: 200px;
-    
-}
-.col-2{
-    margin: auto;
-    flex: 1.5;
-}
-.col-2 h1{
-    font-family: w;
-    font-size: 100px;
-    text-transform: capitalize;
-    position: absolute;
-    top: 50px;
-    left: 47%;
-    z-index: 100;
-}
-.box1 .col-2 h1{
-    top: 0;
-}
-.col-2 span{
-    font-size: 8px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.7;
-}
-.line{
-    height: 1px;
-    width: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 2rem 0;
-}
-.text-box p{
-    font-size: 12px;
-    line-height: 1.9;
-    padding-bottom: 1rem;
-    opacity: .7;
-}
-.box2 .col-1 img:first-child{
-    width: 200px;
-    height: 250px;
-    transform: translateY(200px);
-
-}
-
-.box2 .col-1 img:nth-child(2){
-    height: 380px;
-    width: 300px;
-}
-.box2 .col-3 img:nth-child(1){
-    height: 300px;
-    width: 220px;
-}
-.box2 .col-3 img:nth-child(2){
-    height: 200px;
-    width:180px;
-    align-self: flex-end;
-
-}
-.box2 .col-3 img:nth-child(3){
-    height: 200px;
-    width: 380px;
-    transform: translateX(80px);
-}
-.box3 .col-1{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.box3 .col-1 img:nth-child(1){
-    width: 200px;
-    height: 280px;
-    transform: translateX(30px);
-}
-.box3 .col-1 img:nth-child(2){
-    width: 180px;
-    height: 200px;
-    margin-left: 80px;
-    align-self: center;
-}
-.box3 .col-1 img:nth-child(3){
-    width: 280px;
-    height: 180px;
-}
-.box3 .col-1 img:nth-child(4){
-    width: 250px;
-    height: 180px;
-    transform: translateY(-30px)
-}
-
-.box3 .col-3 img{
-    width: 400px;
-    height: auto;
-}
-
-footer{
-    background-color: #141414;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-*/
-/*reality and dream*/ 
 .text-content{
     position: absolute;
     top: 0;
@@ -253,7 +112,16 @@ footer{
     justify-content: center;
     
 }
-
+/*
+p {
+    padding-bottom: 1rem;
+}
+*/
+/*
+.text-container{
+    background-color: red;
+}
+*/
 .title {
     font-family: w;
     width: 450px;
@@ -289,6 +157,7 @@ footer{
     font-weight: 300;
     background: rgba(0, 0, 0, 0.4);
     padding: 5px;
+    
 }
 .v_container {
     position: absolute;
@@ -297,8 +166,11 @@ footer{
     width: 100vw;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    
+
+
 }
-/* push b*/
+/* push envlop*/
 .left-side{
     display: flex;
     flex-direction: column;
@@ -311,8 +183,9 @@ footer{
     font-family: w;
     display: flex;
     text-transform: capitalize;
-}
 
+    
+}
 
 /********* paragraph ********/
 .text-container{
@@ -324,7 +197,8 @@ footer{
     line-height: 1.4;
     opacity: 0.8;
 }
-/*************************/
+/******************************/
+
 .right-side{
     margin: auto;
     width: 150px;
@@ -333,19 +207,22 @@ footer{
     border-bottom: 2px solid;
     border-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    position: relative;    
+    position: relative;
+    /************************/
+    
 }
-/************************/
 
 .right-side p{
     position: absolute;
     top: 45%;
     left: -15%;
     text-transform: uppercase;
-    font-size: 14px; 
+    font-size: 14px;
+    
 }
 .fa-arrow-right-long{
-    transform: translateX(20px);    
+    transform: translateX(20px);
+    
 }
 
 /**********************************************************/
@@ -355,9 +232,11 @@ footer{
     from {
       rotate: 0deg;
     }
+    
     50% {
       scale: 1 1.5;
     }
+    
     to {
       rotate: 360deg;
     }
@@ -378,7 +257,8 @@ footer{
     opacity: 0.8;
     z-index: 0;
   }
-.blur {
+  
+    .blur {
     height: 100vh;
     width: 100vw;
     position:fixed;
@@ -391,12 +271,14 @@ footer{
 
   @media screen and (max-width: 600px){
 
+
     .bg{
         font-size: 70px;
     }
     .sm{
         font-size: 25px;
         height: 20px;
+
     }
     .left{
         left: 15%;
@@ -412,6 +294,7 @@ footer{
     .text-content p{
         transform: translateY(150px);
         text-align: center;
+        
         font-size: 10px;
         letter-spacing: 12px;
         font-weight: 800;
@@ -419,6 +302,7 @@ footer{
     .menu {
         display: flex;
         gap: 3rem; 
+        
         text-transform: uppercase;
         font-weight: 300;
         font-size: 15px;
@@ -434,6 +318,7 @@ footer{
         font-size: 1.5rem;
         cursor: pointer;
         font-family: w;
+        
         visibility: hidden;
     }
     .btn {
@@ -441,26 +326,32 @@ footer{
         text-transform: uppercase;
         font-size: .75rem;
         visibility: hidden;
+        
     }
     .navbar{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;   
+        gap: 1.5rem;
+        
     }
     .txt-bottom{
         line-height: 1.5rem;
     }
+
     /***********************/
     .text-container{
         padding-top: 2rem;
         max-width: 600px;  
     }
+    
     .text-container p{
         text-align: center;
         padding-bottom: 1rem;
         line-height: 1.4;
         opacity: 0.8;
+       
     }
+
     /**********************************************/
     .tv .bg{
         font-size: 45px;
@@ -469,7 +360,8 @@ footer{
         align-items: center;
         display: block;
         padding-top: 5rem;
-     
+    
+    
     }
     .v_container .left-side .tv {
         align-items: center;
@@ -481,6 +373,12 @@ footer{
         transform: translateY(10px);
         
     }
+
+  
+
+
+
+
 
   }
 
