@@ -3,6 +3,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 @font-face {
     font-family: w;
