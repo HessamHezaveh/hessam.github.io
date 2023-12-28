@@ -303,7 +303,7 @@ section{
 
 
 .heading{
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
     text-align: center;
 }
@@ -311,6 +311,7 @@ section{
     color:#ddd;
     margin-top:10px;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 .gallery{
@@ -328,15 +329,15 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222;
+    background-color: #fc3908;
    /* background-blend-mode: luminosity ;*/
-   background-blend-mode: hard-light;
+   background-blend-mode: multiply;
     transition: all 1s ease-in-out;
 }
 
 /********utility class******/
 .box:hover{
-    background-color: #999;
+    background-color: #ffffff;
    /* background-blend-mode: normal ;*/
    background-position: center;
    box-shadow: 0 0 4px #fff;
@@ -477,10 +478,11 @@ section{
     }
     .gallery {
         width: 90%;
-        gap: 20px;
+        gap: 10px;
     /*extera*/
         grid-auto-rows: 220px;
         margin-bottom: 15rem;
+        /*grid-template-columns: repeat(2, 1fr);*/
 
     }
     .left-text {
@@ -488,11 +490,11 @@ section{
         margin-top: 10rem;
         margin-bottom: 5rem;
     }
-    /*not good*/
+    /*not good
     .box{
         grid-row: span 1;
-        grid-column: span 3;
-    }
+        grid-column: span 1;
+    }*/
 
 
 
