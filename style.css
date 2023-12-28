@@ -295,6 +295,7 @@ section{
     
     z-index: 1000;
 }
+
 .left-text {
     flex-basis: 30%;
 
@@ -329,7 +330,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fc3908;
+    background-color: #ff6600;
    /* background-blend-mode: luminosity ;*/
    background-blend-mode: multiply;
     transition: all 1s ease-in-out;
