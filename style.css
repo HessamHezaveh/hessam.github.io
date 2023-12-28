@@ -328,8 +328,12 @@ section{
     background-position: top;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: end;
+    font-size: medium;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 10px;
     background-color: #ff6600;
    /* background-blend-mode: luminosity ;*/
    background-blend-mode: multiply;
