@@ -310,16 +310,16 @@ section{
 
 
 .heading{
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     text-align: center;
 }
 .subheading{
     color:#ddd;
-    margin-top:10px;
+    margin-top:1.5rem;
     text-align: center;
-    font-size: 1.3rem;
-    line-height: 3rem;
+    font-size: x-large;
+    line-height: 2rem;
 }
 
 .gallery{
