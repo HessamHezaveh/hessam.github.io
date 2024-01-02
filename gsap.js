@@ -18,7 +18,7 @@ gsap.to('.img-container',{
 })
 
 //dream
-gsap.to('.right' ,{
+gsap.to('.t-right' ,{
   autoAlpha:0,
   x:500,
   duration:1.5,
@@ -27,7 +27,7 @@ gsap.to('.right' ,{
   }
 })
 //reality
-gsap.to('.left' ,{
+gsap.to('.t-left' ,{
   autoAlpha:0,
   x:-500,
   duration:1.5,

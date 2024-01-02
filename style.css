@@ -117,7 +117,7 @@ section{
 }
 
 .title {
-    font-family: w;
+
     width: 450px;
     position: relative;
     height: 110px;
@@ -130,10 +130,10 @@ section{
     font-size: 35px;
     height: 40px;
 }
-.left{
+.t-left{
     left: -20%;
 }
-.right{
+.t-right{
     top: 50px;
     left: 70%;
 }
@@ -499,11 +499,11 @@ section{
     transform: rotateX(-90deg) translateZ(50px)
 }
 .right{
-    transform: rotateY(90deg) translateZ(-20px) translateY(-50px)
+    transform: rotateY(90deg) translateZ(50px) 
 }
 /*3*/
 .left{
-    transform: rotateY(-90deg) translateZ(30px)
+    transform: rotateY(-90deg) translateZ(50px)
 }
 
 
