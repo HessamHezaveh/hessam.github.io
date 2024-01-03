@@ -1,0 +1,111 @@
+<head></head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+    
+    </head>
+    <body>
+        <div class="draw-div" >
+            
+            <canvas class="draw"></canvas>
+        </div>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                background: transparent;
+            }
+        </style>
+      
+        <script src="three.min.js"></script>    
+         
+        <script>
+                    //import "./style.css"
+            //import * as THREE from "three"
+            //console.log(THREE);
+    
+            //src: https://www.youtube.com/watch?v=By9qRmcrTzs&t=7s
+    
+            //scene
+            let scene = new THREE.Scene();
+    
+            const canvas = document.querySelector(".draw")
+            console.log(canvas.width);
+    
+            //mousemove//////////////////////////////////////////////////////////////////////////////////////////
+            const mouse = new THREE.Vector2();
+            const intersectionPoint = new THREE.Vector3();
+            const planeNormal = new THREE.Vector3();
+            const plane = new THREE.Plane();
+            const raycaster = new THREE.Raycaster();
+    
+            window.addEventListener("mousemove", function(e){
+    
+                //normalize mouse values
+    
+                mouse.x = ((e.clientX/this.window.innerWidth)* 2 - 1);
+                mouse.y = -((e.clientY/this.window.innerHeight)* 2 - 1);
+                //console.log(mouse)
+                //copy method copies the cordinates of the camera position then ve normalize these values
+                planeNormal.copy(camera.position).normalize()
+    
+                //We use this in order to create the plane 
+                plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position)
+                raycaster.setFromCamera(mouse, camera)
+    
+                //call the intersect plan method that takes 2 argument 
+                raycaster.ray.intersectPlane(plane, intersectionPoint)
+            })
+            console.log(this.window.innerWidth/2)
+    
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //mesh
+            const geometry = new THREE.SphereGeometry(2)
+            const material = new THREE.MeshStandardMaterial({color: "red"} )
+            const mesh = new THREE.Mesh(geometry, material)
+            mesh.position.set(0, 0,-5)
+            scene.add(mesh)
+            // light 2/////////////////////////////////////////
+    
+            const pointLight2 = new THREE.PointLight( 0xffffff, 100, 100);
+    
+            scene.add( pointLight2 );
+    
+            const sphereSize2 = 0.3;
+            const pointLightHelper2 = new THREE.PointLightHelper( pointLight2, sphereSize2 );
+            scene.add( pointLightHelper2 );
+    
+            //camera ///////////////////////////////////////////
+    
+            const aspect ={      
+                width: window.innerWidth,
+                height: window.innerHeight,
+            }
+            const camera = new THREE.PerspectiveCamera(80, aspect.width/aspect.height)
+            camera.position.z = 10
+            scene.add(camera);
+            //rendere///////////////////////////////////////////
+            const renderer = new THREE.WebGLRenderer({canvas})
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            //Animate///////////////////////////////////////////
+            function animate(){
+                renderer.render(scene, camera);
+            // console.log(intersectionPoint.x)
+                pointLight2.position.copy(intersectionPoint);
+                //console.log( mouse.x)
+            }
+            renderer.setAnimationLoop(animate)
+        </script>
+        
+    
+    
+    </body>
+    </html>
+</body>
+

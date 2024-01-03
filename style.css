@@ -563,9 +563,34 @@ section{
     color: #fff;
     background: #00c020;
 }
+/*/////////////////////////////////////////////3d//////////////////////////////////////*/
+
+#threedwindow{
+    width: 100%;
+    height: 100%;
+}
+#frame {
+    width: 100%;
+    height: 100%;
+}
+
+.threeDcontainer{
+    background-color:transparent;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+
+
+   /* background-blend-mode: luminosity ;*/
+
+
+
+}
 
 /*///////////////////////////////////tictactoe/////////////////////////////////////////*/
-
 #main-heading{
      text-align: center;
     color: white;
