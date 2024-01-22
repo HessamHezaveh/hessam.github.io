@@ -87,15 +87,15 @@ loader.load(
 /******************************************************************* */
 
 //light
-/*
-const pointLight = new THREE.PointLight( 0xff0000, 10, 1000 );
+
+const pointLight = new THREE.PointLight( "red", 3, 1000 );
 pointLight.position.set( 1, 1, 9);
 scene.add( pointLight );
 
 const sphereSize = 0.5;
 const pointLightHelper = new THREE.PointLightHelper( pointLight, sphereSize );
 scene.add( pointLightHelper );
-*/
+
 
 
 // light 2/////////////////////////////////////////
@@ -124,6 +124,7 @@ scene.add(camera);
 //rendere///////////////////////////////////////////
 const canvas = document.querySelector(".draw")
 const renderer = new THREE.WebGLRenderer({canvas})
+//const renderer = new THREE.WebGLRenderer({canvas, alpha:true})
 renderer.setSize(aspect.width, aspect.height);
 
 
