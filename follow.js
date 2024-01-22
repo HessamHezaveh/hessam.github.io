@@ -100,7 +100,7 @@ scene.add( pointLightHelper );
 
 // light 2/////////////////////////////////////////
 
-const pointLight2 = new THREE.PointLight( 0xffffff, 3, 10);
+const pointLight2 = new THREE.PointLight( "orange", 2, 10);
 
 scene.add( pointLight2 );
 
