@@ -287,7 +287,7 @@ section{
   /*////////////////////////////////grid//////////////////////////////*/
   
 .container {
-    padding: 10vh;
+    padding: 20vh;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
