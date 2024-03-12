@@ -946,6 +946,7 @@ section{
     }
     .text1 h2{
         font-size: 40px;
+
         
     }
     
@@ -994,8 +995,9 @@ section{
         flex-direction: column;
         gap: .5rem;    
     }
-    div .right-side {
+     .right-side {
         margin-top: -2rem;
+        gap: 1rem;
     
 
     }
@@ -1008,8 +1010,14 @@ section{
     .left-side img{
         width: 250px;
     }
+
     .right-sideBtn2{
-        margin-top: -1rem;
+        width: 120px;
+        height: 120px;
+        margin-top: -0.5rem;
+    }
+    .right-sideBtn2 p{
+        top: 35%;
     }
 
     /********************************************/

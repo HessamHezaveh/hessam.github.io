@@ -54,21 +54,14 @@ gsap.to('.txt-bottom',{
 
 const tl = gsap.timeline();
 //explore
-/*
-tl.from('.right-side div',{
-  y:15,
-  opacity:0,
-  stagger:{
-    amount:.4
-  },
-  delay:.5
-})*/
+
+
 
 //push part
 //we say hide here
 
 tl.from('.left-side div, .left-side img',{
-  y:150,
+  y:100,
   opacity:0,
   // stagger:{
   //   amount:.4
@@ -77,10 +70,18 @@ tl.from('.left-side div, .left-side img',{
   // duration:10,
   // delay:5
 })
+tl.from('.right-side div',{
+  y:100,
+  opacity:0,
+  stagger:{
+    amount:4
+  },
+  delay:.5
+})
 
 
 //explore
-
+/*
 tl.from('.text1 ',{
   y:150,
   opacity:0,
@@ -89,7 +90,7 @@ tl.from('.text1 ',{
   // },
   // duration:30,
   // delay:5
-})
+})*/
 
 // tl.to('.text1',{
 //   y:150,
@@ -102,7 +103,7 @@ tl.from('.text1 ',{
 // })
 
 
-
+/*
 tl.from('.text2 ',{
   y:150,
   opacity:0,
@@ -111,7 +112,7 @@ tl.from('.text2 ',{
   // },
   // duration:30,
   // delay:5
-})
+})*/
 // tl.to('.text2',{
 //   y:150,
 //   opacity:0,
@@ -121,23 +122,25 @@ tl.from('.text2 ',{
 //   // duration:3,
 //   // delay:.5
 // })
-tl.from('.text3',{
+
+/*tl.from('.text3',{
   y:150,
   opacity:0,
 
 })
-.to('.text3',{
-     y:15,
-     opacity:1,
+*/
+// .to('.text3',{
+//      y:15,
+//      opacity:1,
 
-   })
+//    })
 
 
 
 
 ScrollTrigger.create({
   animation:tl,
-  scrub:3,
+  scrub:4,
   markers:true,
   trigger:'.wrapper',
   start:"top top",
