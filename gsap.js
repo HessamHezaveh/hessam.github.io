@@ -1,7 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  toggleActions:"play none none reverse"
+  // toggleActions:"restart pause resume pause"
+   toggleActions:"play none none reverse"
 })
 //eye
 gsap.to('.img-container',{
@@ -10,12 +11,13 @@ gsap.to('.img-container',{
   scrollTrigger:{
     trigger:'.video-section',
     scrub:3,
-    snap: 1/('.img-container'.length -1),
+    // snap: 1/('.img-container'.length-1),
     start:"top top",
     end:"bottom",
     pin:true
   }
 })
+
 
 //dream
 gsap.to('.t-right' ,{
@@ -26,6 +28,7 @@ gsap.to('.t-right' ,{
   start:1
   }
 })
+
 //reality
 gsap.to('.t-left' ,{
   autoAlpha:0,
@@ -36,15 +39,18 @@ gsap.to('.t-left' ,{
   }
 })
 
+//matne payini
 gsap.to('.txt-bottom',{
   autoAlpha:0,
   letterSpacing:-3,
   duration:0.5,
   scrollTrigger:{
-    //2
+    
   start:1
   }
 })
+
+
 
 const tl = gsap.timeline();
 //explore
@@ -59,48 +65,87 @@ tl.from('.right-side div',{
 })*/
 
 //push part
+//we say hide here
 
-tl.from('.left-side div',{
-  y:15,
+tl.from('.left-side div, .left-side img',{
+  y:150,
   opacity:0,
-  stagger:{
-    amount:.4
-  },
-  delay:.5
+  // stagger:{
+  //   amount:.4
+  // },
+  
+  // duration:10,
+  // delay:5
 })
+
 
 //explore
-tl.from('.right-side',{
-  y:15,
+
+tl.from('.text1 ',{
+  y:150,
   opacity:0,
-  stagger:{
-    amount:.4
-  },
-  delay:.5
+  // stagger:{
+  //   amount:.4
+  // },
+  // duration:30,
+  // delay:5
 })
+
+// tl.to('.text1',{
+//   y:150,
+//   opacity:0,
+//   // stagger:{
+//   //   amount:.4
+//   // },
+//   // duration:3,
+//   // delay:.5
+// })
+
+
+
+tl.from('.text2 ',{
+  y:150,
+  opacity:0,
+  // stagger:{
+  //   amount:.4
+  // },
+  // duration:30,
+  // delay:5
+})
+// tl.to('.text2',{
+//   y:150,
+//   opacity:0,
+//   // stagger:{
+//   //   amount:0.4
+//   // },
+//   // duration:3,
+//   // delay:.5
+// })
+tl.from('.text3',{
+  y:150,
+  opacity:0,
+
+})
+.to('.text3',{
+     y:15,
+     opacity:1,
+
+   })
 
 
 
 
 ScrollTrigger.create({
   animation:tl,
+  scrub:3,
+  markers:true,
   trigger:'.wrapper',
   start:"top top",
-  end:"+=800",
-  scrub:3,
-  //pin:true,
+  
+  end:"bottom bottom ",
+  // pin:true,
   ease:"ease",
-  delay:.5  
+  // duration:50
+  // delay:50  
 })
-
-const timeline = gsap.timeline();
-
-timeline.from('.title span' ,{
-  y:15,
-  skewY:5,
-  duration:3
-}).from('.txt-bottom',{
-  letterSpacing:-10,
-  opacity:0,
-  duration:3
-})
+ 
