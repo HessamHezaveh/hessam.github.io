@@ -125,6 +125,7 @@ section{
     overflow: hidden;
 }
 .bg{
+    font-family: w;
     font-size: 100px;
 }
 .tv .bg{
@@ -1023,14 +1024,26 @@ section{
 
 
 }
-@media screen and (max-height: 700px){
+
+@media screen and (max-width: 400px){
+    .bg{
+        font-size: 55px;
+        font-weight: 900;
+        font-family: w;
+    }
+    .sm{
+        font-size:20px ;
+    }
+    .img_txt{
+        padding-left: 4rem;
+    }
     .left-side img{
-        width: 120px;
+        width: 150px;
     }
     .left-side{
 
         align-items: center;
-        gap: 7rem;
+        gap: 3rem;
         padding-top: 1rem ;
     }
 
