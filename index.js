@@ -88,7 +88,7 @@ function init() {
     let numberOfParticles = (canvas.height * canvas.width) / 10000;
     for(let i = 0; i < numberOfParticles; i++){
         //size
-        let size = (Math.random() * 30) + 1;
+        let size = (Math.random() * 5) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
@@ -103,7 +103,7 @@ function init() {
 }
 // check if particles are close enough to draw a line between them
 function connect(){
-    let opacityValue = 1;
+    let opacityValue = 10;
     for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++){
             let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));

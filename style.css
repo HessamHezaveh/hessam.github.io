@@ -88,6 +88,11 @@ section{
     width:100vw;
     flex-shrink: 0;
     overflow: hidden;
+  
+}
+.animationsection{
+    position: fixed;
+
 }
 
 
@@ -185,6 +190,7 @@ section{
 
 
 }
+
 /* push envlop*/
 .left-side{
     display: flex;
@@ -243,36 +249,11 @@ section{
     
 
 }
-.sections{
-    scroll-snap-align: start; 
-}
 
 
-.right-sideBtn{
-    margin: 0;
-    width: 160px;
-    height: 160px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    position: relative;
-    transition: .5s;
- 
-    /* scroll-snap-align: start; */
-    /************************/
-    
-}
 
-.right-sideBtn p{
-    position: absolute;
-    top: 45%;
-    left: 5%; 
-    text-transform: uppercase;
-    font-size: 13px;
 
-    
-}
+
 .fa-arrow-right-long{
     transform: translateX(2px);
     
@@ -296,27 +277,109 @@ section{
 }
 .keydiv{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    /* align-items: center;
+    justify-content: space-evenly; */
     gap: 1rem;
 }
-.keydiv .right-sideBtn{
 
-    width: 100px;
-    height: 100px; 
-    align-items: center;
-    justify-content: center;
+/*//btn//////////////////////////////////////////////////*/
+
+
+.right-sideBtn{
+    margin: 0;
+    width: 160px;
+    height: 160px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+    transition: .5s;
 
 }
-.keydiv .right-sideBtn p{
+
+.right-sideBtn p{
+    position: absolute;
     top: 40%;
-    left: 20%;
+    left: 10%; 
+    text-transform: uppercase;
+    font-size: 20px;
+
+
     
 }
 
+.right-sideBtn1{
+    position: absolute;
+    left: 250%;
+    top: 10%;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+    transition: .5s;
+ 
+    /* scroll-snap-align: start; */
+    /************************/
+}
+.right-sideBtn1 p{
+    position: absolute;
+    top: 35%;
+    left: 10%; 
+    text-transform: uppercase;
+    font-size: 10px;
+    
+    
+}
+
+
+.right-sideBtn2{
+    position: absolute;
+    left: 160%;
+    top: 80%;
+    margin: 0;
+    width: 100px;
+    height: 100px; 
+
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+    transition: .5s;
+    align-items: center;
+    justify-content: center;
+}
+.right-sideBtn2 p{
+    position: absolute;
+    top: 40%;
+    left: 15%; 
+    text-transform: uppercase;
+    font-size: 13px;
+    
+    
+}
+
+
+
+
 .right-sideBtn:hover{
     background-color: rgba(0, 0, 0, .5);
-    color: black;
+    color: rgb(255, 255, 255);
+
+}
+.right-sideBtn1:hover{
+    background-color: rgba(83, 2, 2, 0.5);
+    color: rgb(255, 255, 255);
+
+}
+.right-sideBtn2:hover{
+    background-color: rgba(0, 61, 3, 0.5);
+    color: rgb(255, 255, 255);
 
 }
 .answerInput{
@@ -668,6 +731,7 @@ section{
   /*********************************phone***************************************/
 
   @media screen and (max-width: 1200px){
+
     .bg{
         font-size: 70px;
     }
@@ -720,6 +784,7 @@ section{
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        padding: 0.1rem 1rem;
         
     }
     .txt-bottom{
@@ -849,26 +914,35 @@ section{
         height: 40px
 
     }
-    .keydiv {
+    /* .keydiv {
         justify-content:center
-    }
-    .keydiv .right-sideBtn{
-        width: 80px;
-        height: 80px; 
+    } */
 
-    }
-    .keydiv .right-sideBtn p{
-        top: 30%;
-        left: 5%;
-        font-size: 15px;
-        
-    }
     .right-side{
         padding: 3rem;
         gap: 2rem;
     }
+
+
+
+    .right-sideBtn p{
+        top: 45%;
+        font-size: 20px;
+    }
+    .right-sideBtn1{
+        left: 270%;
+    }
+    .right-sideBtn1 p{
+        top: 30%;
+        font-size: 10px;
+    }
     .right-sideBtn2{
-        margin-top: -2rem;
+        left: 180%;
+    }
+    .right-sideBtn2 p{
+        top: 40%;
+        font-size: 15px;
+        left: 10%;
     }
 
 
@@ -932,6 +1006,7 @@ section{
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+         padding: 0.1rem 1rem;
         
     }
     .txt-bottom{
@@ -1011,14 +1086,7 @@ section{
         width: 250px;
     }
 
-    .right-sideBtn2{
-        width: 120px;
-        height: 120px;
-        margin-top: -0.5rem;
-    }
-    .right-sideBtn2 p{
-        top: 35%;
-    }
+
 
     /********************************************/
  
@@ -1033,7 +1101,7 @@ section{
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .bg{
         font-size: 55px;
         font-weight: 900;
@@ -1066,13 +1134,13 @@ section{
  
         font-size: 20px;
     } 
-    .right-sideBtn2{
+    /* .right-sideBtn2{
         margin-top: -.5rem;
-    }
+    } */
     .right-side{
         gap:.5rem
     }
-    .keydiv .right-sideBtn{
+    /* .keydiv .right-sideBtn{
         width: 60px;
         height: 60px; 
 
@@ -1082,22 +1150,56 @@ section{
         left: 5%;
         font-size: 10px;
         
-    }
-    .right-sideBtn{
+    } */
+    /* .right-sideBtn{
         width: 120px;
         height: 120px; 
 
-    }
+    } */
 
-    .right-sideBtn p{
+    /* .right-sideBtn p{
         top: 45%;
         left: 5%;
         font-size: 10px;
         
-    }
+    } */
     .right-side .text2 h2{
         font-size: 15px;
     }
+    
+
+    .right-sideBtn{
+        left: -20%;
+    }
+
+    .right-sideBtn1{
+        left: 180%;
+    }
+    .right-sideBtn2{
+        left: 100%;
+    }
+
+
+/*     
+    .right-sideBtn p{
+        top: 45%;
+        font-size: 20px;
+    }
+    .right-sideBtn1{
+        left: 270%;
+    }
+    .right-sideBtn1 p{
+        top: 30%;
+        font-size: 10px;
+    }
+    .right-sideBtn2{
+        left: 180%;
+    }
+    .right-sideBtn2 p{
+        top: 40%;
+        font-size: 15px;
+        left: 10%;
+    } */
 
 
 

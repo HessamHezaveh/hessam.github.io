@@ -1,4 +1,8 @@
+let width = window.innerWidth;
+let height = window.innerHeight;
+
 gsap.registerPlugin(ScrollTrigger);
+
 
 ScrollTrigger.defaults({
   // toggleActions:"restart pause resume pause"
@@ -60,7 +64,7 @@ const tl = gsap.timeline();
 //push part
 //we say hide here
 
-tl.from('.left-side div, .left-side img',{
+tl.from('.animation1 div, .animation1 img',{
   y:100,
   opacity:0,
   // stagger:{
@@ -70,7 +74,7 @@ tl.from('.left-side div, .left-side img',{
   // duration:10,
   // delay:5
 })
-tl.from('.right-side div',{
+tl.from('.animation2 div',{
   y:100,
   opacity:0,
   stagger:{
@@ -78,6 +82,9 @@ tl.from('.right-side div',{
   },
   delay:.5
 })
+
+//t2//////////////////////////////////////////////////////////////////////
+
 
 
 //explore
@@ -145,10 +152,18 @@ ScrollTrigger.create({
   trigger:'.wrapper',
   start:"top top",
   
-  end:"bottom bottom ",
-  // pin:true,
+  end:`+=${height -500}`,
+  //pin:true,
   ease:"ease",
   // duration:50
   // delay:50  
 })
+
+// if(){
+
+// }else{
+
+// }
+
+
  
