@@ -727,6 +727,30 @@ section{
 
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2rem;
+    
+}
+/*************************************GAME******************************************/
+.game1{
+    width: 90vw;
+    height: 90vh;
+    margin: 4rem;
+   
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.game1 h2{
+    font-family: w;
+    font-size: 5rem;
+    padding-top: 1rem;
+}
+.gameframe{
+    width: 90%;
+    height: 80%;
+    border-radius: 30px;
 }
   /*********************************phone***************************************/
 
