@@ -178,6 +178,7 @@ class Game{
            this.ctx.font = '40px Anta'  
         }else if(window.innerWidth<600){
            this.ctx.font = '25px Anta'  
+           
         }
        
     
@@ -336,8 +337,10 @@ class Game{
     drawStatusText(){
         //wrapping something between save and restore which is a canvas method limit any changes we make here to canvas state to the area between these two lines of code.   
         this.ctx.save();
-        this.ctx.fillText('Score:' + this.score, this.width-50 , 70);
+        
+        this.ctx.fillText('Score:' + this.score, this.width-50 , 70, );
         this.ctx.textAlign = 'left';
+        
         this.ctx.fillText('Timer:' + this.formatTimer(), 50, 70);
         if(!this.startBtn){
             this.ctx.textAlign = 'center';
@@ -357,6 +360,7 @@ class Game{
             this.ctx.fillText(this.message1 , this.width *0.5 , this.height*0.5-40);
             if(window.innerWidth>=700){
                 this.ctx.font = '40px Anta'  
+              
              }else if(window.innerWidth<700){
                 this.ctx.font = '25px Anta'  
              }
