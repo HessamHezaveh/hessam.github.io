@@ -18,7 +18,7 @@ class Game{
 
         //fined the ratio between canvas(game area) size and base height (actual) 
         this.ratio = this.height/ this.baseHeight;
-        // this.fpsratio = this.deltaTime/6;
+        this.fpsratio;
         //we create an instance of the background class as this.background property==> pass this represent this gameclass
         this.background = new Background(this)
         //call player class here 
@@ -57,6 +57,7 @@ class Game{
         this.button1.onclick = function(){
             window.location.replace("https://hessamhezaveh.github.io/grid.html");
         }
+        
         
 
 
@@ -166,6 +167,7 @@ class Game{
         this.timer = 0;
         this.button1.style['display']='none';
     }
+    
 
 
     resize(width, height){
@@ -192,7 +194,8 @@ class Game{
        // this.ctx.fillStyle='blue';
         //dynamice height
         this.ratio = this.height/ this.baseHeight
-
+        
+        
         //we need to scale the gravity 
         this.gravity = .1 * this.ratio;
         //speed
@@ -223,6 +226,8 @@ class Game{
         //background
         if (!this.gameOver && this.startBtn) this.timer += deltaTime;
         this.handlePeriodicEvents(deltaTime);
+        this.fpsratio =  deltaTime/6;
+        
         this.background.update();
         this.background.draw();
 
@@ -244,6 +249,9 @@ class Game{
   
 
     }
+    
+
+
     //when this method runs it will set this.obstacles to an empty array
     createObstacles(){
         this.obstacles=[];
@@ -252,6 +260,7 @@ class Game{
         //the left margin space between the obstcles 
         const obstacleSpacing = 600* this.ratio;
         //based on numbers that we set before
+        
 
         for (let i = 0; i<this.numberOfObstacles; i++){
             //array push method is java script will take whatever we pass to it and it will add it to end of the array
@@ -296,6 +305,7 @@ class Game{
            // console.log(this.eventTimer)
            // console.log(deltaTime)// /6
            //console.log(fpsratio)
+           
 
         }
 

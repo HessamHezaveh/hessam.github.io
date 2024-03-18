@@ -18,6 +18,7 @@ class Player {
         //add reality to gravity(helper property) initial speed
         this.speedY;
         this.flapSpeed;
+      
 
         this.collisionX;
         this.collisionY;
@@ -57,12 +58,12 @@ class Player {
             this.handleEnergy()
             if(this.speedY>=0) this.wingsUp();//when pleyer is moving down 
     
-            this.y += this.speedY;
+            this.y += this.speedY*this.game.fpsratio;
             this.collisionY = this.y + this.height * 0.5;
             //apply gravity here to touch the ground
             if (!this.isTouchingBottom() ){
                 //pull it down by gavity force
-                this.speedY +=this.game.gravity;
+                this.speedY +=this.game.gravity*this.game.fpsratio;
             } 
 
         }
@@ -101,7 +102,7 @@ class Player {
         //start from center
         this.y = this.game.height * 0.5 - this.height * 0.5;
         //initial jump speed 
-        this.speedY =-6 * this.game.ratio;
+        this.speedY =-6 * this.game.ratio *this.game.fpsratio;
         //jump speed
         this.flapSpeed =4*this.game.ratio;
 

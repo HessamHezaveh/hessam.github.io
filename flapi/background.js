@@ -22,14 +22,15 @@ class Background{
     update(){
 
         //make it move 
+        console.log(this.game.fpsratio)
 
-        this.x -= this.game.speed ;
+        this.x -= this.game.speed * this.game.fpsratio ;
         if(this.x<= -this.scaledWidth) this.x = 0;
 
-        this.x2 -= this.game.speed * .3 ;
+        this.x2 -= this.game.speed * .3 * this.game.fpsratio ;
         if(this.x2<= -this.scaledWidth) this.x2 = 0;
 
-        this.x3 -= this.game.speed * .1 ;
+        this.x3 -= this.game.speed * .1 *this.game.fpsratio;
         if(this.x3<= -this.scaledWidth) this.x3 = 0;
 
     }

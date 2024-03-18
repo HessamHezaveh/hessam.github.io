@@ -32,8 +32,8 @@ class Obstacle{
     }
     update(){
         //obstacles appear static in the game world same speed value by game world speed 
-        this.x -= this.game.speed;
-        this.y += this.speedY;
+        this.x -= this.game.speed*this.game.fpsratio;
+        this.y += this.speedY*this.game.fpsratio;
 
         //make them move around with object 
         this.collisionX = this.x+(this.scaledWidth *0.5);
@@ -47,7 +47,7 @@ class Obstacle{
                 this.speedY *=-1;
             }
         } else {
-            this.speedY += 0.1;
+            this.speedY += 0.1*this.game.fpsratio;
         }
 
         //min50 recheck
