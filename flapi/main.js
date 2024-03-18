@@ -17,7 +17,8 @@ class Game{
         this.sound=new AudioControl()
 
         //fined the ratio between canvas(game area) size and base height (actual) 
-        this.ratio = this.height/ this.baseHeight
+        this.ratio = this.height/ this.baseHeight;
+        // this.fpsratio = this.deltaTime/6;
         //we create an instance of the background class as this.background property==> pass this represent this gameclass
         this.background = new Background(this)
         //call player class here 
@@ -294,6 +295,7 @@ class Game{
             this.eventUpdate= true;
            // console.log(this.eventTimer)
            // console.log(deltaTime)// /6
+           //console.log(fpsratio)
 
         }
 
