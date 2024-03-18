@@ -8,7 +8,146 @@
     <title>HessamHezaveh</title>
     <link rel="stylesheet" href="./style.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <style>
+        .riddle{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 1rem;
 
+        }
+        .riddle h1{
+            font-family: w;
+            font-size: 4rem;
+        }
+        .riddle h2{
+            padding-top: 2rem;
+            font-size: 1.6rem;
+            font-weight: 100;
+        }
+        .riddle h3{
+            
+            font-size: 2.5rem;
+            font-weight: 200;
+        }
+        .riddle p{
+            font-family: w;
+            font-size: 1.8rem;
+            padding: 1rem 20rem;
+    
+            text-align: center;
+        }
+        .keydiv{
+            display: flex;
+            padding-top: 3rem;
+        }
+        #keybtn{
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 700;
+            color: antiquewhite;
+            background-color:rgba(29, 29, 29, 0.788) ;
+            border: 1px solid rgba(29, 29, 29, .2);
+            transition: .5s;
+        }
+        #keybtn:hover{
+            color: rgba(29, 29, 29, 1);
+            background-color:rgba(29, 29, 29, 0.2) ;
+            border: 1px solid rgba(29, 29, 29, .8);
+        }
+        #keyinput{
+            background-color: rgba(29, 29, 29, 0.5);
+            border: 1px solid rgba(29, 29, 29, .8) ;
+            border-radius: 5px;
+            width: 20rem;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 1rem;
+            color: aliceblue;
+            
+        }
+        .correct{
+            font-size: 2rem;
+
+
+
+        }
+        .correct:hover{
+
+
+            color:rgb(0, 255, 42) ;
+            
+
+
+        }
+        @media screen and (max-width: 1200px){
+
+        .riddle h2{
+            padding-top: 1rem;
+
+        }
+
+        .riddle p{
+
+            padding:1rem 10rem ;
+        }
+
+        }
+        @media screen and (max-width: 700px){
+        .riddle p{
+
+            padding:1rem 5rem ;
+        }
+        .riddle h2{
+            text-align: center;
+            padding:0rem 5rem ;
+        }
+        .riddle h1{
+        font-size: 3rem;
+        margin-top: -3rem;
+        }
+        
+
+        }
+        @media screen and (max-width: 500px){
+            .riddle h1{
+                font-size: 2.5rem;
+                padding: 2rem 0rem;
+            }
+            .riddle h2{
+                font-size: 1.5rem;
+                padding:0rem 2rem ;
+            }
+            .riddle h3{
+                font-size: 1.3rem;
+                font-weight: 300;
+
+            }
+            .riddle p{
+                padding:1rem 2rem ;
+            }
+            .keydiv{
+                flex-direction: column;
+                
+            }
+            #keybtn{
+                font-size: 1rem;
+            }
+            #keyinput{
+                font-size: 1rem;
+            }
+
+
+
+
+
+        }
+
+    </style>
 </head>
 <body>
 
@@ -29,12 +168,42 @@
         </nav>
     </header>
 
+    <div class="riddle">
+        <h1> Hellooo Genius! </h1>
+        <h3>I love confident humans</h3>
+        <p>You will be allowed to pass if the answer is <span class="correct" >Correct</span>, otherwise you will be my guest forever <br>...</p>
+        <h2> There is a Key, now you know it, write the key down below!</h2>
+        <div class="keydiv">
+            <input id="keyinput" type="text" placeholder=" Write the key here">
+            <button id="keybtn">submit</button>
+        </div>
 
-    
 
 
- 
+    </div> 
+
 </body>
+<script>
+
+const button1 = document.getElementById('keybtn');
+const key = "Correct";
+button1.onclick = function(){
+    const keyinput = document.getElementById('keyinput').value
+
+    // console.log(keyinput.value)
+    if(keyinput == key){
+        
+    
+        window.location.replace("https://hessamhezaveh.github.io/grid.html");
+        console.log('true')
+            
+    }else{
+        console.log('false')
+
+    }
+}
+
+</script>
 
 
 <script src="./glowscript.js"></script>

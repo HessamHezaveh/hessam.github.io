@@ -292,6 +292,8 @@ class Game{
             this.eventTimer = this.eventTimer%this.eventInterval ;//0 is not accurate 
             //^ it returns the remainder left over when one operand divided by second operand 
             this.eventUpdate= true;
+           // console.log(this.eventTimer)
+           // console.log(deltaTime)// /6
 
         }
 
@@ -414,6 +416,7 @@ window. addEventListener('load',function(){
         lastTime = timeStamp;
         ctx.clearRect(0,0,canvas.width,canvas.height)
         game.render(deltaTime);
+        
         // if(!game.gameOver) 
         
         requestAnimationFrame(animate);

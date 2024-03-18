@@ -447,7 +447,7 @@ section{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    
+   
     justify-content: space-evenly;
     align-items: center;
     gap: 30px;
@@ -815,8 +815,9 @@ section{
         line-height: 1.5rem;
     }
     .container{
-        padding: 5rem 1rem;
-        padding-left: 2rem;
+        padding: 5rem 3rem;
+        padding-right: 4rem;
+
     }
 
     .gallery{
@@ -828,12 +829,12 @@ section{
         justify-content: center;
         gap: 1rem;
         
-        padding: 1rem;
+        padding: 2rem;
         
 
   
     
-        border:solid ;
+        
     
     }
     .row-2{
