@@ -474,7 +474,13 @@ section{
     display: flex;
     flex-direction: column;
     grid-row: span 1;
+    overflow: hidden;
     
+}
+.ifland{
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
 }
 .box1{
     width: 100%;
@@ -729,6 +735,7 @@ section{
     border-radius: 2rem;
     
 }
+
 /*************************************GAME******************************************/
 .game1{
     width: 90vw;
@@ -836,6 +843,11 @@ section{
     
         
     
+    }
+    .ifland{
+        
+        aspect-ratio:2/1 ;
+        overflow: hidden;
     }
     .row-2{
         grid-row: span 1;
