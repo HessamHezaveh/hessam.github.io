@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <div id="preloader"></div>
 
     <div id="blob"></div>
     <div class="blur" id="blur"></div>
@@ -65,7 +66,7 @@
     </div>
 
     <div class="box col-2 row-2"  > <iframe src="./vanila nasa/index.html" frameborder="0" class="ifland" ></iframe> </div>
-    <div class="box" > <img src="./img/14.png" alt=""></div>
+    <div class="box" > <img src="./img/14.png"  alt=""></div>
     <div class="box" ><img src="./img/P12.jpg" alt=""></div>
     <div class="box" ><img src="./img/P11 copy.png" alt=""></div>
     <!-- <div class="box" ><img src="./img/p13.png" alt=""></div> -->
@@ -164,7 +165,12 @@
 
 
 
- 
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display = "none"
+    })
+</script> 
 </body>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="scrollreveal.js"></script>

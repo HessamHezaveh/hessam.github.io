@@ -67,12 +67,12 @@ const tl = gsap.timeline();
 tl.from('.animation1 div, .animation1 img',{
   y:100,
   opacity:0,
-  // stagger:{
-  //   amount:.4
-  // },
+  stagger:{
+    amount:.4
+  },
   
-  // duration:10,
-  // delay:5
+  duration:10,
+  delay:0.5
 })
 tl.from('.animation2 div',{
   y:100,

@@ -1259,3 +1259,14 @@ section{
 
 }
 
+#preloader{
+    background: #0c0c0c url(./media/OSNw.gif) no-repeat center center;
+    background-size:30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-blend-mode: lighten;
+
+
+}
