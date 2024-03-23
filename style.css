@@ -1156,6 +1156,9 @@ section{
 }
 
 @media screen and (max-width: 450px){
+    .container{
+        padding: 5rem 1rem;
+    }
     .bg{
         font-size: 55px;
         font-weight: 900;
