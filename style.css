@@ -476,6 +476,7 @@ section{
     grid-row: span 1;
     overflow: hidden;
     
+    
 }
 .ifland{
     width: 100%; 
@@ -503,6 +504,11 @@ section{
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    border: 2px solid rgb(34, 34, 34);
+    /* grid-row: span 1; */
+   
+
+
 }
 
 .box1 img{
@@ -523,6 +529,17 @@ section{
     grid-column: span 1;
     
    
+}
+.subheading{
+ 
+ 
+    align-items: stretch;
+    justify-content: stretch;
+
+
+    margin: 0;
+
+    
 }
 
 .row-2{

@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 //import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
 
-import { MapControls} from "three/addons/controls/MapControls";
+//import { MapControls} from "three/addons/controls/MapControls";
 import { OrbitControls} from "three/addons/controls/OrbitControls";
 // import * as dat from "dat.gui";
 
@@ -19,7 +19,7 @@ const scene = new THREE.Scene();
 //-----------------------Texture loader------------------------------------------
 
 const textureLoader = new THREE.TextureLoader();
-const colorTexture = textureLoader.load("./s4.jpg");
+const colorTexture = textureLoader.load("./s8.jpg");
 colorTexture.colorSpace=THREE.SRGBColorSpace;
 
 
@@ -68,7 +68,7 @@ const aspect = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
-const camera = new THREE.PerspectiveCamera(60, aspect.width / aspect.height);
+const camera = new THREE.PerspectiveCamera(50, aspect.width / aspect.height);
 camera.position.z = 5;
 
 scene.add(camera);
