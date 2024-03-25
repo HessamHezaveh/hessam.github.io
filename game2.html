@@ -74,6 +74,7 @@
 
 </head>
 <body>
+    <div id="preloader"></div>
 
     <div id="blob"></div>
     <div class="blur" id="blur"  style="height: 200vh; margin-top: -10rem; "></div>
@@ -125,6 +126,13 @@
 
         
     </div>
+    <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+       
+    })
+</script> 
     <script src="./flapi/audio.js"></script>
     <script src="./flapi/background.js"></script>
     <script src="./flapi/player.js"></script>
