@@ -148,7 +148,7 @@ tl.from('.text2 ',{
 ScrollTrigger.create({
   animation:tl,
   scrub:4,
-  markers:true,
+  // markers:true,
   trigger:'.wrapper',
   start:"top top",
   
