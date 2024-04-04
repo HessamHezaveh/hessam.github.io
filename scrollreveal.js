@@ -5,6 +5,6 @@ ScrollReveal({
     delay:200
 });
 ScrollReveal().reveal('.gallery', {origin:'bottom'});
-// ScrollReveal().reveal('.box', {origin:'bottom'});
+ScrollReveal().reveal('.box', '.left-text', '.threeDcontainer', {origin:'top'});
 // ScrollReveal().reveal('.home-content h1, .about-img', {origin:'left'});
 // ScrollReveal().reveal('.home-content p, .about-content', {origin:'right'});
