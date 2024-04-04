@@ -464,7 +464,6 @@ section{
     gap: 1rem;
     
     padding: 5rem;
-
     border:solid rgb(26, 25, 25);
 
 }
@@ -476,7 +475,6 @@ section{
     grid-row: span 1;
     overflow: hidden;
 
-    
     
 }
 .cursorGrab{
@@ -516,7 +514,10 @@ section{
 
 
 }
-
+.heading{
+    font-family: w;
+    font-size: 3rem;
+}
 .box1 img{
     
     width:100%;
@@ -539,11 +540,13 @@ section{
 .subheading{
  
  
-    align-items: stretch;
-    justify-content: stretch;
+    align-items: center;
+    justify-content: center;
+    
+    line-height: 2rem;
+    text-align: justify;
 
-
-    margin: 0;
+    margin-top: 1rem;
 
     
 }
